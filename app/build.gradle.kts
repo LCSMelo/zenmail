@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "br.com.fiap.locawebchallenge"
+    namespace = "br.com.fiap.zenmail"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "br.com.fiap.locawebchallenge"
+        applicationId = "br.com.fiap.zenmail"
         minSdk = 27
         targetSdk = 34
         versionCode = 1
