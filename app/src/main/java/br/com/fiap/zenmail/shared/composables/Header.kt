@@ -73,6 +73,7 @@ fun Header(
                     horizontalArrangement = Arrangement.End,
                 ) {
                     if (isLogged) {
+<<<<<<< HEAD
                         TextButton(
                             onClick = { navController!!.navigate("mails?id=$id") },
                             Modifier.height(32.dp)
@@ -81,6 +82,27 @@ fun Header(
                                 text = "ENTRADA",
                                 style = Typography.bodyLarge,
                                 color = colorResource(id = if (screenIndex == 1) R.color.secondary else R.color.primary)
+=======
+//                        TextButton(
+//                            onClick = { navController!!.navigate("mails?id=$id") },
+//                            Modifier.height(32.dp)
+//                        ) {
+//                            Text(
+//                                text = "ENTRADA",
+//                                style = Typography.bodyLarge,
+//                                color = colorResource(id = if (screenIndex == 1) R.color.secondary else R.color.primary)
+//                            )
+//                        }
+                        Surface(
+                            onClick = {
+                                navController!!.navigate("mails")
+                            }
+                        ) {
+                            Image(
+                                painter = painterResource(id = R.drawable.logo),
+                                contentDescription = "Locamail Logo",
+                                modifier = Modifier.size(48.dp)
+>>>>>>> 35b2989 (mudanças no header)
                             )
                         }
                         TextButton(
