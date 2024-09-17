@@ -73,16 +73,57 @@ fun Header(
                     horizontalArrangement = Arrangement.End,
                 ) {
                     if (isLogged) {
-<<<<<<< HEAD
-                        TextButton(
-                            onClick = { navController!!.navigate("mails?id=$id") },
-                            Modifier.height(32.dp)
-                        ) {
-                            Text(
-                                text = "ENTRADA",
-                                style = Typography.bodyLarge,
-                                color = colorResource(id = if (screenIndex == 1) R.color.secondary else R.color.primary)
-=======
+                        Row(
+                            Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceEvenly,
+                            ){
+                            Surface(
+                                onClick = {
+                                    navController!!.navigate("mails")
+                                }
+                            ) {
+                                Image(
+                                    painter = painterResource(id = R.drawable.entrada),
+                                    contentDescription = "Caixa de entrada",
+                                    modifier = Modifier.size(42.dp)
+                                )
+                            }
+                            Surface(
+                                onClick = {
+                                    navController!!.navigate("sent")
+                                }
+                            ) {
+                                Image(
+                                    painter = painterResource(id = R.drawable.saida),
+                                    contentDescription = "Caixa de saída",
+                                    modifier = Modifier.size(42.dp)
+                                )
+                            }
+                            Surface(
+                                onClick = {
+                                    navController!!.navigate("deleted")
+                                }
+                            ) {
+                                Image(
+                                    painter = painterResource(id = R.drawable.excluido),
+                                    contentDescription = "Excluídos",
+                                    modifier = Modifier.size(42.dp)
+                                )
+                            }
+                            Surface(
+                                onClick = {
+                                    navController!!.navigate("spam")
+                                }
+                            ) {
+                                Image(
+                                    painter = painterResource(id = R.drawable.spam),
+                                    contentDescription = "Spam",
+                                    modifier = Modifier.size(42.dp)
+                                )
+                            }
+                        }
+
+
 //                        TextButton(
 //                            onClick = { navController!!.navigate("mails?id=$id") },
 //                            Modifier.height(32.dp)
@@ -93,38 +134,28 @@ fun Header(
 //                                color = colorResource(id = if (screenIndex == 1) R.color.secondary else R.color.primary)
 //                            )
 //                        }
-                        Surface(
-                            onClick = {
-                                navController!!.navigate("mails")
-                            }
-                        ) {
-                            Image(
-                                painter = painterResource(id = R.drawable.logo),
-                                contentDescription = "Locamail Logo",
-                                modifier = Modifier.size(48.dp)
->>>>>>> 35b2989 (mudanças no header)
-                            )
-                        }
-                        TextButton(
-                            onClick = { navController!!.navigate("sent?id=$id") },
-                            Modifier.height(32.dp)
-                        ) {
-                            Text(
-                                text = "ENVIADOS",
-                                style = Typography.bodyLarge,
-                                color = colorResource(id = if (screenIndex == 2) R.color.secondary else R.color.primary)
-                            )
-                        }
-                        TextButton(
-                            onClick = { navController!!.navigate("deleted?id=$id") },
-                            Modifier.height(32.dp)
-                        ) {
-                            Text(
-                                text = "EXCLUÍDOS",
-                                style = Typography.bodyLarge,
-                                color = colorResource(id = if (screenIndex == 4) R.color.secondary else R.color.primary)
-                            )
-                        }
+
+//                        TextButton(
+//                            onClick = { navController!!.navigate("sent?id=$id") },
+//                            Modifier.height(32.dp)
+//                        ) {
+//                            Text(
+//                                text = "ENVIADOS",
+//                                style = Typography.bodyLarge,
+//                                color = colorResource(id = if (screenIndex == 2) R.color.secondary else R.color.primary)
+//                            )
+//                        }
+
+//                        TextButton(
+//                            onClick = { navController!!.navigate("deleted?id=$id") },
+//                            Modifier.height(32.dp)
+//                        ) {
+//                            Text(
+//                                text = "EXCLUÍDOS",
+//                                style = Typography.bodyLarge,
+//                                color = colorResource(id = if (screenIndex == 4) R.color.secondary else R.color.primary)
+//                            )
+//                        }
                     }
                 }
             }
