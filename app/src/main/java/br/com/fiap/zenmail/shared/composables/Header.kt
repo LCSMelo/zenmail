@@ -59,8 +59,8 @@ fun Header(
                 } else {
                     Image(
                         painter = painterResource(id = R.drawable.logo),
-                        contentDescription = "Locamail Logo",
-                        modifier = Modifier.size(48.dp)
+                        contentDescription = "Zenmail Logo",
+                        modifier = Modifier.size(48.dp).padding(8.dp)
                     )
                     Text(text = "ZenMail",
                         style = Typography.titleLarge,

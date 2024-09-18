@@ -17,8 +17,10 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import br.com.fiap.zenmail.R
 import br.com.fiap.zenmail.shared.composables.Header
 import br.com.fiap.zenmail.shared.composables.MailCard
@@ -89,4 +91,14 @@ fun SpamView(navController: NavController, viewModel: SpamViewModel, id: Int) {
         }
 
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun SpamViewPreview() {
+    val navController = rememberNavController()
+    val dummyViewModel = SpamViewModel()
+
+    // Chama o SpamView com dados de exemplo para a pré-visualização
+    SpamView(navController = navController, viewModel = dummyViewModel, id = 1)
 }
